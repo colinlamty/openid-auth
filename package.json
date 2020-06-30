@@ -1,0 +1,48 @@
+{
+  "name": "eab-openid-connect",
+  "version": "1.1.4",
+  "description": "",
+  "main": "dist/main.js",
+  "module": "dist/main.es.js",
+  "publishConfig": {
+    "registry": "http://192.168.222.170:4873" 
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "lint": "eslint ./",
+    "smartbuild": "npm run build && cp -r build/* broker-api/node_modules/eab-express-openid-common-auth/build/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.10.3",
+    "@babel/preset-env": "7.10.3",
+    "eslint": "6.0.1",
+    "eslint-config-airbnb-base": "13.2.0",
+    "eslint-plugin-import": "2.18.0",
+    "eslint-plugin-jest": "22.7.2",
+    "eslint-plugin-security": "1.4.0",
+    "jest": "24.8.0",
+    "jest-coverage-badges": "1.1.2",
+    "jest-transform-stub": "2.0.0",
+    "lodash": "4.17.15",
+    "rollup": "2.18.0",
+    "rollup-plugin-babel": "4.4.0",
+    "rollup-plugin-commonjs": "10.1.0",
+    "rollup-plugin-node-polyfills": "0.2.1",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-peer-deps-external": "2.2.2",
+    "rollup-plugin-uglify": "6.0.4"
+  },
+  "dependencies": {
+    "buffer": "5.6.0",
+    "crypto": "1.0.1",
+    "eslint": "7.3.1",
+    "jsonwebtoken": "8.5.1",
+    "process": "0.11.10",
+    "request": "2.88.2",
+    "stream": "0.0.2",
+    "util": "0.12.3"
+  }
+}
